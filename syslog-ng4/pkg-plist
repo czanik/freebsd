@@ -141,11 +141,9 @@ include/syslog-ng/logproto/logproto-client.h
 include/syslog-ng/logproto/logproto-dgram-server.h
 include/syslog-ng/logproto/logproto-framed-client.h
 include/syslog-ng/logproto/logproto-framed-server.h
-include/syslog-ng/logproto/logproto-indented-multiline-server.h
 include/syslog-ng/logproto/logproto-multiline-server.h
 include/syslog-ng/logproto/logproto-proxied-text-server.h
 include/syslog-ng/logproto/logproto-record-server.h
-include/syslog-ng/logproto/logproto-regexp-multiline-server.h
 include/syslog-ng/logproto/logproto-server.h
 include/syslog-ng/logproto/logproto-text-client.h
 include/syslog-ng/logproto/logproto-text-server.h
@@ -170,6 +168,10 @@ include/syslog-ng/ml-batched-timer.h
 include/syslog-ng/module-config.h
 include/syslog-ng/msg-format.h
 include/syslog-ng/msg-stats.h
+include/syslog-ng/multi-line/indented-multi-line.h
+include/syslog-ng/multi-line/multi-line-factory.h
+include/syslog-ng/multi-line/multi-line-logic.h
+include/syslog-ng/multi-line/regexp-multi-line.h
 include/syslog-ng/nondumpable-allocator.h
 include/syslog-ng/parse-number.h
 include/syslog-ng/parser/parser-expr-parser.h
@@ -259,7 +261,9 @@ include/syslog-ng/timeutils/zonecache.h
 include/syslog-ng/timeutils/zonedb.h
 include/syslog-ng/timeutils/zoneinfo.h
 include/syslog-ng/tls-support.h
-include/syslog-ng/tlscontext.h
+include/syslog-ng/transport/tls-context.h
+include/syslog-ng/transport/tls-session.h
+include/syslog-ng/transport/tls-verifier.h
 include/syslog-ng/transport/logtransport.h
 include/syslog-ng/transport/multitransport.h
 include/syslog-ng/transport/transport-aux-data.h
@@ -314,7 +318,7 @@ lib/syslog-ng/libcef.so
 lib/syslog-ng/libconfgen.so
 lib/syslog-ng/libcryptofuncs.so
 lib/syslog-ng/libcsvparser.so
-lib/syslog-ng/libdbparser.so
+lib/syslog-ng/libcorrelation.so
 lib/syslog-ng/libdisk-buffer.so
 lib/syslog-ng/libexamples.so
 lib/syslog-ng/libgraphite.so
