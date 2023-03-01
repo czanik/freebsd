@@ -229,6 +229,7 @@ include/syslog-ng/stats/stats-query-commands.h
 include/syslog-ng/stats/stats-query.h
 include/syslog-ng/stats/stats-registry.h
 include/syslog-ng/stats/stats.h
+include/syslog-ng/stats/stats-prometheus.h
 include/syslog-ng/str-format.h
 include/syslog-ng/str-repr/decode.h
 include/syslog-ng/str-repr/encode.h
@@ -326,6 +327,7 @@ lib/syslog-ng/libhook-commands.so
 lib/syslog-ng/libkvformat.so
 lib/syslog-ng/liblinux-kmsg-format.so
 lib/syslog-ng/libmap-value-pairs.so
+lib/syslog-ng/libmetrics-probe.so
 lib/syslog-ng/libpseudofile.so
 lib/syslog-ng/libregexp-parser.so
 lib/syslog-ng/libsecure-logging.so
