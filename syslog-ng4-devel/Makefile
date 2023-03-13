@@ -54,7 +54,6 @@ SHEBANG_FILES=	lib/merge-grammar.py
 GNU_CONFIGURE=	yes
 # Note: Even if PYTHON is deselected, glib20 will install python.
 USE_GNOME=	glib20
-# USE_PYTHON=	allflavors
 SUB_FILES=	pkg-message
 INSTALL_TARGET=	install-strip
 
@@ -148,6 +147,7 @@ JAVA_MOD_PLIST_FILES=		lib/syslog-ng/java-modules/log4j-api-2.17.2.jar \
 				lib/syslog-ng/java-modules/http.jar \
 				lib/syslog-ng/java-modules/syslog-ng-common.jar
 
+PYTHON_BUILD_DEPENDS=		${PYTHON_PKGNAMEPREFIX}setuptools>0:devel/py-setuptools@${PY_FLAVOR}
 PYTHON_USES=			python:3.5+
 PYTHON_CONFIGURE_ON=		--enable-python
 PYTHON_CONFIGURE_OFF=		--disable-python
