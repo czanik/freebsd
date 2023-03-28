@@ -291,6 +291,12 @@ include/syslog-ng/versioning.h
 include/syslog-ng/window-size-counter.h
 include/syslog-ng/mainloop-threaded-worker.h
 include/syslog-ng/metrics-pipe.h
+include/syslog-ng/cfg-persist.h
+include/syslog-ng/healthcheck/healthcheck-control.h
+include/syslog-ng/healthcheck/healthcheck-stats.h
+include/syslog-ng/healthcheck/healthcheck.h
+include/syslog-ng/healthcheck/stopwatch.h
+include/syslog-ng/stats/stats-cluster-key-builder.h
 lib/libevtlog-4.1.so.0
 lib/libevtlog-4.1.so.0.0.0
 lib/libevtlog.so
