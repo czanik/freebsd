@@ -1,9 +1,9 @@
 PORTNAME=	syslog-ng
-DISTVERSION=	4.1.1.232.g0bb3770
+DISTVERSION=	4.1.1.285.g6f93169
 CATEGORIES=	sysutils
-# using a self generated release tgz as upstream 4.0.1 tgz is broken on FreeBSD
-# see: https://github.com/syslog-ng/syslog-ng/issues/4275
+# official master site:
 # MASTER_SITES=	https://github.com/balabit/syslog-ng/releases/download/syslog-ng-${DISTVERSION}/
+# for development snapshots:
 MASTER_SITES=	https://peter.czanik.hu/freebsd/
 
 MAINTAINER=	cy@FreeBSD.org
