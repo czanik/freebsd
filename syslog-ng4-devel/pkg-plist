@@ -297,6 +297,11 @@ include/syslog-ng/healthcheck/healthcheck-stats.h
 include/syslog-ng/healthcheck/healthcheck.h
 include/syslog-ng/healthcheck/stopwatch.h
 include/syslog-ng/stats/stats-cluster-key-builder.h
+include/syslog-ng/cfg-monitor.h
+include/syslog-ng/multi-line/multi-line-pattern.h
+include/syslog-ng/multi-line/smart-multi-line.h
+include/syslog-ng/stats/stats-compat.h
+share/syslog-ng/smart-multi-line.fsm
 lib/libevtlog-4.1.so.0
 lib/libevtlog-4.1.so.0.0.0
 lib/libevtlog.so
