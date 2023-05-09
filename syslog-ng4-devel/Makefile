@@ -1,5 +1,5 @@
 PORTNAME=	syslog-ng
-DISTVERSION=	4.1.1.434.gc4b9093
+DISTVERSION=	4.1.1.537.gc5cd4e0
 CATEGORIES=	sysutils
 # official master site:
 # MASTER_SITES=	https://github.com/balabit/syslog-ng/releases/download/syslog-ng-${DISTVERSION}/
@@ -177,6 +177,9 @@ PYTHON_PLIST_FILES=		lib/syslog-ng/libmod-python.so \
 		lib/syslog-ng/python/syslogng/modules/example/__init__.py \
 		lib/syslog-ng/python/syslogng/modules/example/__pycache__/__init__%%PYTHON_EXT_SUFFIX%%.pyc \
 		lib/syslog-ng/python/syslogng/modules/example/scl/example.conf \
+		lib/syslog-ng/python/syslogng/modules/hypr/__init__.py \
+		lib/syslog-ng/python/syslogng/modules/hypr/__pycache__/__init__%%PYTHON_EXT_SUFFIX%%.pyc \
+		lib/syslog-ng/python/syslogng/modules/hypr/scl/hypr.conf \
 		lib/syslog-ng/python/syslogng/parser.py \
 		lib/syslog-ng/python/syslogng/persist.py \
 		lib/syslog-ng/python/syslogng/source.py \
