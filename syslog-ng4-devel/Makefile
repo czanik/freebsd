@@ -1,5 +1,5 @@
 PORTNAME=	syslog-ng
-DISTVERSION=	4.1.1.537.gc5cd4e0
+DISTVERSION=	4.1.1.546.g9be4fd0
 CATEGORIES=	sysutils
 # official master site:
 # MASTER_SITES=	https://github.com/balabit/syslog-ng/releases/download/syslog-ng-${DISTVERSION}/

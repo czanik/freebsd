@@ -417,6 +417,7 @@ share/syslog-ng/include/scl/websense/plugin.conf
 share/syslog-ng/include/scl/windowseventlog/plugin.conf
 share/syslog-ng/include/scl/windowseventlog/windowseventlog.xml
 share/syslog-ng/include/scl/mariadb/audit.conf
+share/syslog-ng/include/scl/splunk/splunk.conf
 share/syslog-ng/tools/cfg-grammar.y
 share/syslog-ng/tools/lex-rules.am
 share/syslog-ng/tools/merge-grammar.py
