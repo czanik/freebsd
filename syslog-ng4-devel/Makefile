@@ -1,10 +1,10 @@
 PORTNAME=	syslog-ng
-DISTVERSION=	4.1.1.546.g9be4fd0
+DISTVERSION=	4.2.0
 CATEGORIES=	sysutils
 # official master site:
-# MASTER_SITES=	https://github.com/balabit/syslog-ng/releases/download/syslog-ng-${DISTVERSION}/
+MASTER_SITES=	https://github.com/balabit/syslog-ng/releases/download/syslog-ng-${DISTVERSION}/
 # for development snapshots:
-MASTER_SITES=	https://peter.czanik.hu/freebsd/
+# MASTER_SITES=	https://peter.czanik.hu/freebsd/
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Powerful syslogd replacement
