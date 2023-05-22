@@ -1,5 +1,5 @@
 PORTNAME=	syslog-ng
-DISTVERSION=	4.2.0
+DISTVERSION=	4.2.0.16.g51c7bc0
 CATEGORIES=	sysutils
 # official master site:
 MASTER_SITES=	https://github.com/balabit/syslog-ng/releases/download/syslog-ng-${DISTVERSION}/
@@ -30,7 +30,7 @@ CONFLICTS?=	syslog-ng syslog-ng[0-9] \
 WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION}
 
 MAKE_JOBS_UNSAFE=	yes
-OPTIONS_DEFINE=	TCP_WRAPPERS SQL SPOOF IPV6 SMTP JSON GEOIP2 DOCS REDIS JAVA PYTHON MONGO CURL JAVA_MOD AMQP RIEMANN KAFKA SNMPDEST
+OPTIONS_DEFINE=	TCP_WRAPPERS SQL SPOOF IPV6 SMTP JSON GEOIP2 DOCS REDIS JAVA PYTHON PYTHON_MOD MONGO CURL JAVA_MOD AMQP RIEMANN KAFKA SNMPDEST
 OPTIONS_DEFAULT=	CURL JSON
 TCP_WRAPPERS_DESC=	Build with TCP Wrappers
 SQL_DESC=		Build with database (libdbi) support
@@ -42,6 +42,7 @@ REDIS_DESC=		Build with Redis support
 JAVA_DESC=		Build with Java support (no modules)
 JAVA_MOD_DESC=		Build with Java modules (needs Maven / Internet access)
 PYTHON_DESC=		Build with Python ${PYTHON_VER} support
+PYTHON_MOD_DESC=	Build with Python modules (Kubernetes, Hyper, etc.)
 CURL_DESC=		Build with Curl HTTP support
 AMQP_DESC=		Build with AMQP support
 RIEMANN_DESC=		Build with Riemann support
@@ -154,12 +155,8 @@ PYTHON_CONFIGURE_OFF=		--disable-python
 PYTHON_PLIST_FILES=		lib/syslog-ng/libmod-python.so \
 		etc/python/README.md \
 		lib/syslog-ng/python/requirements.txt \
-		lib/syslog-ng/python/syslogng-1.0-py%%PYTHON_VER%%.egg-info/requires.txt \
 		lib/syslog-ng/python/syslogng/__pycache__/confgen%%PYTHON_EXT_SUFFIX%%.pyc \
 		lib/syslog-ng/python/syslogng/confgen.py \
-		lib/syslog-ng/python/syslogng/modules/kubernetes/__init__.py \
-		lib/syslog-ng/python/syslogng/modules/kubernetes/__pycache__/__init__%%PYTHON_EXT_SUFFIX%%.pyc \
-		lib/syslog-ng/python/syslogng/modules/kubernetes/scl/kubernetes.conf \
 		lib/syslog-ng/python/syslogng-1.0-py%%PYTHON_VER%%.egg-info/PKG-INFO \
 		lib/syslog-ng/python/syslogng-1.0-py%%PYTHON_VER%%.egg-info/SOURCES.txt \
 		lib/syslog-ng/python/syslogng-1.0-py%%PYTHON_VER%%.egg-info/dependency_links.txt \
@@ -174,12 +171,6 @@ PYTHON_PLIST_FILES=		lib/syslog-ng/libmod-python.so \
 		lib/syslog-ng/python/syslogng/dest.py \
 		lib/syslog-ng/python/syslogng/logger.py \
 		lib/syslog-ng/python/syslogng/message.py \
-		lib/syslog-ng/python/syslogng/modules/example/__init__.py \
-		lib/syslog-ng/python/syslogng/modules/example/__pycache__/__init__%%PYTHON_EXT_SUFFIX%%.pyc \
-		lib/syslog-ng/python/syslogng/modules/example/scl/example.conf \
-		lib/syslog-ng/python/syslogng/modules/hypr/__init__.py \
-		lib/syslog-ng/python/syslogng/modules/hypr/__pycache__/__init__%%PYTHON_EXT_SUFFIX%%.pyc \
-		lib/syslog-ng/python/syslogng/modules/hypr/scl/hypr.conf \
 		lib/syslog-ng/python/syslogng/parser.py \
 		lib/syslog-ng/python/syslogng/persist.py \
 		lib/syslog-ng/python/syslogng/source.py \
@@ -224,6 +215,21 @@ PYTHON_PLIST_FILES=		lib/syslog-ng/libmod-python.so \
 		lib/syslog-ng/python/syslogng/debuggercli/editline.py \
 		lib/syslog-ng/python/syslogng/debuggercli/tflang.py \
 		lib/syslog-ng/python/syslogng/debuggercli/__pycache__/tflang.cpython-${PYTHON_SUFFIX}.pyc
+
+PYTHON_MOD_IMPLIES=		PYTHON
+PYTHON_MOD_CONFIGURE_ON=	--enable-python-modules
+PYTHON_MOD_CONFIGURE_OFF=	--disable-python-modules
+PYTHON_MOD_PLIST_FILES=		lib/syslog-ng/python/syslogng-1.0-py%%PYTHON_VER%%.egg-info/requires.txt \
+		lib/syslog-ng/python/syslogng/modules/kubernetes/__init__.py \
+		lib/syslog-ng/python/syslogng/modules/kubernetes/__pycache__/__init__%%PYTHON_EXT_SUFFIX%%.pyc \
+		lib/syslog-ng/python/syslogng/modules/kubernetes/scl/kubernetes.conf \
+		lib/syslog-ng/python/syslogng/modules/example/__init__.py \
+		lib/syslog-ng/python/syslogng/modules/example/__pycache__/__init__%%PYTHON_EXT_SUFFIX%%.pyc \
+		lib/syslog-ng/python/syslogng/modules/example/scl/example.conf \
+		lib/syslog-ng/python/syslogng/modules/hypr/__init__.py \
+		lib/syslog-ng/python/syslogng/modules/hypr/__pycache__/__init__%%PYTHON_EXT_SUFFIX%%.pyc \
+		lib/syslog-ng/python/syslogng/modules/hypr/scl/hypr.conf
+
 
 CURL_CONFIGURE_OFF=		--with-libcurl=off
 CURL_CONFIGURE_ON=		--enable-http
