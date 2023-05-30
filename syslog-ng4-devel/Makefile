@@ -1,5 +1,5 @@
 PORTNAME=	syslog-ng
-DISTVERSION=	4.2.0.16.g51c7bc0
+DISTVERSION=	4.2.0.38.g0a39c11
 CATEGORIES=	sysutils
 # official master site:
 MASTER_SITES=	https://github.com/balabit/syslog-ng/releases/download/syslog-ng-${DISTVERSION}/
@@ -60,7 +60,7 @@ INSTALL_TARGET=	install-strip
 
 CONFIGURE_ARGS=	--sysconfdir=${LOCALBASE}/etc --localstatedir=/var/db \
 		--enable-dynamic-linking --enable-manpages \
-		--disable-linux-caps \
+		--disable-linux-caps --disable-cpp \
 		--datadir=${PREFIX}/share/ \
 		--with-python=${PYTHON_VER} --with-python-packages=none
 
