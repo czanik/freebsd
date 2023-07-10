@@ -7,7 +7,6 @@ bin/slogkey
 bin/slogverify
 bin/update-patterndb
 bin/syslog-ng-update-virtualenv
-@sample etc/scl.conf.sample
 etc/syslog-ng.conf.dist
 include/syslog-ng/ack-tracker/ack_tracker.h
 include/syslog-ng/ack-tracker/ack_tracker_factory.h
@@ -158,6 +157,8 @@ include/syslog-ng/logthrdest/logthrdestdrv.h
 include/syslog-ng/logthrsource/logthrfetcherdrv.h
 include/syslog-ng/logthrsource/logthrsourcedrv.h
 include/syslog-ng/logwriter.h
+include/syslog-ng/logscheduler-pipe.h
+include/syslog-ng/logscheduler.h
 include/syslog-ng/mainloop-call.h
 include/syslog-ng/mainloop-control.h
 include/syslog-ng/mainloop-io-worker.h
@@ -421,6 +422,7 @@ share/syslog-ng/include/scl/windowseventlog/windowseventlog.xml
 share/syslog-ng/include/scl/mariadb/audit.conf
 share/syslog-ng/include/scl/splunk/splunk.conf
 share/syslog-ng/include/scl/logscale/logscale.conf
+share/syslog-ng/include/scl.conf
 share/syslog-ng/tools/cfg-grammar.y
 share/syslog-ng/tools/lex-rules.am
 share/syslog-ng/tools/merge-grammar.py

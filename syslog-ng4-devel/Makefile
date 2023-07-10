@@ -1,5 +1,5 @@
 PORTNAME=	syslog-ng
-DISTVERSION=	4.2.0.131.ge514bb9
+DISTVERSION=	4.2.0.154.g0684039
 CATEGORIES=	sysutils
 # official master site:
 MASTER_SITES=	https://github.com/balabit/syslog-ng/releases/download/syslog-ng-${DISTVERSION}/
@@ -16,7 +16,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 BROKEN_sparc64=		fails to link: Internal error: Segmentation fault (program ld)
 
-LIB_DEPENDS=	libpcre.so:devel/pcre \
+LIB_DEPENDS=	libpcre2-8.so:devel/pcre \
 		libuuid.so:misc/e2fsprogs-libuuid
 
 USES=		autoreconf:build compiler:c11 cpe gettext-runtime gmake gnome \
@@ -258,7 +258,6 @@ BROKEN=		Default configuration does not currently support non-JSON builds
 
 post-patch:
 	@${CP} ${WRKSRC}/scl/syslog-ng.conf ${WRKSRC}/scl/syslog-ng.conf.dist
-	@${CP} ${WRKSRC}/scl/scl.conf ${WRKSRC}/scl/scl.conf.sample
 	touch -r ${WRKSRC}/lib/cfg-grammar.y ${WRKSRC}/lib/merge-grammar.py
 
 post-patch-JAVA_MOD-on:
@@ -277,7 +276,7 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/syslog-ng.conf.sample \
 		${STAGEDIR}${PREFIX}/etc
 	${INSTALL_DATA} ${WRKSRC}/scl/syslog-ng.conf.dist \
-		${WRKSRC}/scl/scl.conf.sample ${STAGEDIR}${PREFIX}/etc
+		${STAGEDIR}${PREFIX}/etc
 	${INSTALL_DATA} ${WRKSRC}/lib/ivykis/src/include/iv*.h \
 		${STAGEDIR}${PREFIX}/include/syslog-ng/
 
