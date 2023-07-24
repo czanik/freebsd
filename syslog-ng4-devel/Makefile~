@@ -255,10 +255,6 @@ KAFKA_PLIST_FILES=		lib/syslog-ng/libkafka.so
 BROKEN=		Default configuration does not currently support non-JSON builds
 .endif
 
-.if ${PORT_OPTIONS:MJAVA_MOD}
-BROKEN=		Java modules do not build currently
-.endif
-
 post-patch:
 	@${CP} ${WRKSRC}/scl/syslog-ng.conf ${WRKSRC}/scl/syslog-ng.conf.dist
 	touch -r ${WRKSRC}/lib/cfg-grammar.y ${WRKSRC}/lib/merge-grammar.py
