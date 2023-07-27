@@ -17,7 +17,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 BROKEN_sparc64=		fails to link: Internal error: Segmentation fault (program ld)
 
 LIB_DEPENDS=	libpcre2-8.so:devel/pcre \
-		libuuid.so:misc/e2fsprogs-libuuid
+		libuuid.so:misc/e2fsprogs-libuuid \
+		libivykis.so:devel/ivykis
 
 USES=		autoreconf:build compiler:c11 cpe gettext-runtime gmake gnome \
 		libtool pathfix pkgconfig python:3.5+,build shebangfix ssl
@@ -63,7 +64,7 @@ INSTALL_TARGET=	install-strip
 CONFIGURE_ARGS=	--sysconfdir=${LOCALBASE}/etc --localstatedir=/var/db \
 		--enable-dynamic-linking --enable-manpages \
 		--disable-linux-caps --disable-cpp \
-		--datadir=${PREFIX}/share/ \
+		--datadir=${PREFIX}/share/ --with-ivykis=system \
 		--with-python=${PYTHON_VER} --with-python-packages=none
 
 CONFIGURE_ENV+=		OPENSSL_CFLAGS="-I${OPENSSLINC}" \
