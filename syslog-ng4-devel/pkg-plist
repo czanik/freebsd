@@ -239,6 +239,7 @@ include/syslog-ng/template/repr.h
 include/syslog-ng/template/simple-function.h
 include/syslog-ng/template/templates.h
 include/syslog-ng/template/user-function.h
+include/syslog-ng/template/globals.h
 include/syslog-ng/thread-utils.h
 include/syslog-ng/timeutils/cache.h
 include/syslog-ng/timeutils/conv.h
