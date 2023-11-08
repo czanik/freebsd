@@ -37,6 +37,7 @@ include/syslog-ng/cfg-walker.h
 include/syslog-ng/cfg.h
 include/syslog-ng/children.h
 include/syslog-ng/compat/compat.h
+include/syslog-ng/compat/curl.h
 include/syslog-ng/compat/getent-generic.h
 include/syslog-ng/compat/getent-openbsd.h
 include/syslog-ng/compat/getent-sun.h
