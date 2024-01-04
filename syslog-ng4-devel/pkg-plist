@@ -417,6 +417,8 @@ share/syslog-ng/include/scl/opensearch/opensearch.conf
 share/syslog-ng/include/scl/google/google-pubsub.conf
 share/syslog-ng/include/scl/openobserve/openobserve.conf
 share/syslog-ng/include/scl/pgsql/pgsql.conf
+share/syslog-ng/include/scl/pihole/pihole.conf
+share/syslog-ng/include/scl/qbittorrent/qbittorrent.conf
 share/syslog-ng/include/scl.conf
 share/syslog-ng/tools/cfg-grammar.y
 share/syslog-ng/tools/lex-rules.am
