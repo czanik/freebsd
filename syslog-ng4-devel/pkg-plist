@@ -419,6 +419,8 @@ share/syslog-ng/include/scl/openobserve/openobserve.conf
 share/syslog-ng/include/scl/pgsql/pgsql.conf
 share/syslog-ng/include/scl/pihole/pihole.conf
 share/syslog-ng/include/scl/qbittorrent/qbittorrent.conf
+share/syslog-ng/include/scl/darwinosl/darwinosl-metadata-db.csv
+share/syslog-ng/include/scl/darwinosl/plugin.conf
 share/syslog-ng/include/scl.conf
 share/syslog-ng/tools/cfg-grammar.y
 share/syslog-ng/tools/lex-rules.am
