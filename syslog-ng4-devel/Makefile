@@ -1,5 +1,5 @@
 PORTNAME=	syslog-ng
-DISTVERSION=	4.5.0.224.g94e9383
+DISTVERSION=	4.5.0.231.g903d001
 CATEGORIES=	sysutils
 # official master site:
 MASTER_SITES=	https://github.com/balabit/syslog-ng/releases/download/syslog-ng-${DISTVERSION}/
@@ -50,8 +50,6 @@ RIEMANN_DESC=		Build with Riemann support
 KAFKA_DESC=		Build with Kafka (librdkafka) support
 SNMPDEST_DESC=		Build with SNMP destination (net-snmp) support
 GRPC_DESC=		Build with experimental GRPC-based modules (OpenTelemetry, Loki, etc.)
-
-# USE_GCC=	yes
 
 USE_LDCONFIG=	yes
 USE_RC_SUBR=	syslog-ng
@@ -279,6 +277,10 @@ BROKEN=		Default configuration does not currently support non-JSON builds
 
 .if ${PORT_OPTIONS:MJAVA_MOD}
 BROKEN=		Java modules do not build currently
+.endif
+
+.if ${PORT_OPTIONS:MGRPC}
+BROKEN=		GRPC-based modules do not build currently
 .endif
 
 post-patch:
