@@ -324,6 +324,7 @@ include/syslog-ng/filterx/object-message-value.h
 include/syslog-ng/filterx/object-null.h
 include/syslog-ng/filterx/object-primitive.h
 include/syslog-ng/filterx/object-string.h
+include/syslog-ng/filterx/expr-condition.h
 share/syslog-ng/smart-multi-line.fsm
 lib/libevtlog-4.6.so.0
 lib/libevtlog-4.6.so.0.0.0
