@@ -155,6 +155,8 @@ include/syslog-ng/mainloop-worker.h
 include/syslog-ng/mainloop.h
 include/syslog-ng/memtrace.h
 include/syslog-ng/messages.h
+include/syslog-ng/metrics/label-template.h
+include/syslog-ng/metrics/metrics-template.h
 include/syslog-ng/misc.h
 include/syslog-ng/ml-batched-timer.h
 include/syslog-ng/module-config.h
