@@ -1,5 +1,5 @@
 PORTNAME=	syslog-ng
-DISTVERSION=	4.6.0.429.gba6d7d7
+DISTVERSION=	4.7.0
 PORTREVISION=	1
 CATEGORIES=	sysutils
 # official master site:
