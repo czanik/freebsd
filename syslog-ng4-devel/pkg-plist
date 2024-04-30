@@ -304,13 +304,10 @@ include/syslog-ng/compat/json.h
 include/syslog-ng/filterx/expr-assign.h
 include/syslog-ng/filterx/expr-boolalg.h
 include/syslog-ng/filterx/expr-comparison.h
-include/syslog-ng/filterx/expr-dict.h
 include/syslog-ng/filterx/expr-function.h
 include/syslog-ng/filterx/expr-get-subscript.h
 include/syslog-ng/filterx/expr-getattr.h
-include/syslog-ng/filterx/expr-list.h
 include/syslog-ng/filterx/expr-literal.h
-include/syslog-ng/filterx/expr-message-ref.h
 include/syslog-ng/filterx/expr-set-subscript.h
 include/syslog-ng/filterx/expr-setattr.h
 include/syslog-ng/filterx/expr-template.h
@@ -334,6 +331,13 @@ include/syslog-ng/filterx/object-dict-interface.h
 include/syslog-ng/filterx/object-json-internal.h
 include/syslog-ng/filterx/object-list-interface.h
 include/syslog-ng/filterx/filterx-private.h
+include/syslog-ng/filterx/expr-generator.h
+include/syslog-ng/filterx/expr-literal-generator.h
+include/syslog-ng/filterx/expr-regexp.h
+include/syslog-ng/filterx/expr-shorthand.h
+include/syslog-ng/filterx/expr-variable.h
+include/syslog-ng/filterx/func-istype.h
+include/syslog-ng/filterx/func-len.h
 share/syslog-ng/smart-multi-line.fsm
 lib/libevtlog-4.7.so.0
 lib/libevtlog-4.7.so.0.0.0
