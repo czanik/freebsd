@@ -1,5 +1,5 @@
 PORTNAME=	syslog-ng
-DISTVERSION=	4.7.1.104.gcc5a7d9
+DISTVERSION=	4.7.1.212.g7e81fa5
 CATEGORIES=	sysutils
 # official master site:
 MASTER_SITES=	https://github.com/balabit/syslog-ng/releases/download/syslog-ng-${DISTVERSION}/
@@ -265,7 +265,10 @@ GRPC_PLIST_FILES=		lib/libgrpc-protos.so \
  				lib/libgrpc-protos.so.0 \
  				lib/libgrpc-protos.so.0.0.0 \
  				lib/syslog-ng/libloki.so \
- 				lib/syslog-ng/libotel.so
+ 				lib/syslog-ng/libotel.so \
+ 				lib/syslog-ng/libbigquery.so \
+				lib/syslog-ng/libcloud_auth.so
+
 
 .include <bsd.port.pre.mk>
 
@@ -277,9 +280,9 @@ BROKEN=		Default configuration does not currently support non-JSON builds
 BROKEN=		Java modules do not build currently
 .endif
 
-.if ${PORT_OPTIONS:MGRPC}
-BROKEN=		GRPC-based modules do not build currently
-.endif
+# .if ${PORT_OPTIONS:MGRPC}
+# BROKEN=		GRPC-based modules do not build currently
+# .endif
 
 post-patch:
 	@${CP} ${WRKSRC}/scl/syslog-ng.conf ${WRKSRC}/scl/syslog-ng.conf.dist
