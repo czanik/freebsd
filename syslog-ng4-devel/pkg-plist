@@ -135,7 +135,6 @@ include/syslog-ng/logproto/logproto-dgram-server.h
 include/syslog-ng/logproto/logproto-framed-client.h
 include/syslog-ng/logproto/logproto-framed-server.h
 include/syslog-ng/logproto/logproto-multiline-server.h
-include/syslog-ng/logproto/logproto-proxied-text-server.h
 include/syslog-ng/logproto/logproto-record-server.h
 include/syslog-ng/logproto/logproto-server.h
 include/syslog-ng/logproto/logproto-text-client.h
@@ -274,6 +273,8 @@ include/syslog-ng/transport/transport-factory.h
 include/syslog-ng/transport/transport-file.h
 include/syslog-ng/transport/transport-pipe.h
 include/syslog-ng/transport/transport-socket.h
+include/syslog-ng/transport/transport-socket-proxy-private.h
+include/syslog-ng/transport/transport-socket-proxy.h
 include/syslog-ng/transport/transport-tls.h
 include/syslog-ng/transport/transport-udp-socket.h
 include/syslog-ng/logmsg/type-hinting.h
