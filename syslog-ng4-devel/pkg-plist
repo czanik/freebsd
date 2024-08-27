@@ -302,6 +302,7 @@ include/syslog-ng/multi-line/smart-multi-line.h
 include/syslog-ng/stats/stats-compat.h
 include/syslog-ng/on-error.h
 include/syslog-ng/compat/json.h
+include/syslog-ng/cfg-helpers.h
 include/syslog-ng/filterx/expr-assign.h
 include/syslog-ng/filterx/expr-boolalg.h
 include/syslog-ng/filterx/expr-comparison.h

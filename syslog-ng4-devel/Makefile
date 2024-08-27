@@ -1,5 +1,5 @@
 PORTNAME=	syslog-ng
-DISTVERSION=	4.8.0
+DISTVERSION=	4.8.0.53.g0cec48a
 CATEGORIES=	sysutils
 # official master site:
 MASTER_SITES=	https://github.com/balabit/syslog-ng/releases/download/syslog-ng-${DISTVERSION}/
@@ -279,10 +279,6 @@ BROKEN=		Default configuration does not currently support non-JSON builds
 .if ${PORT_OPTIONS:MJAVA_MOD}
 BROKEN=		Java modules do not build currently
 .endif
-
-# .if ${PORT_OPTIONS:MGRPC}
-# BROKEN=		GRPC-based modules do not build currently
-# .endif
 
 post-patch:
 	@${CP} ${WRKSRC}/scl/syslog-ng.conf ${WRKSRC}/scl/syslog-ng.conf.dist
