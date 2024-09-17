@@ -54,6 +54,7 @@ include/syslog-ng/compat/time.h
 include/syslog-ng/compat/un.h
 include/syslog-ng/compat/cpp-end.h
 include/syslog-ng/compat/cpp-start.h
+include/syslog-ng/compat/inttypes.h
 include/syslog-ng/control/control-commands.h
 include/syslog-ng/control/control-main.h
 include/syslog-ng/control/control-server.h
