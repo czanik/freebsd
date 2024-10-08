@@ -29,7 +29,7 @@ CONFLICTS?=	syslog-ng syslog-ng[0-9] \
 WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION}
 
 MAKE_JOBS_UNSAFE=	yes
-OPTIONS_DEFINE=	TCP_WRAPPERS SQL SPOOF IPV6 SMTP JSON GEOIP2 DOCS REDIS JAVA PYTHON PYTHON_MOD MONGO CURL JAVA_MOD AMQP RIEMANN KAFKA SNMPDEST GRPC
+OPTIONS_DEFINE=	TCP_WRAPPERS SQL SPOOF IPV6 SMTP JSON GEOIP2 DOCS REDIS JAVA PYTHON PYTHON_MOD MONGO CURL JAVA_MOD AMQP RIEMANN KAFKA SNMPDEST GRPC MQTT
 OPTIONS_DEFAULT=	CURL JSON
 TCP_WRAPPERS_DESC=	Build with TCP Wrappers
 SQL_DESC=		Build with database (libdbi) support
@@ -48,6 +48,7 @@ RIEMANN_DESC=		Build with Riemann support
 KAFKA_DESC=		Build with Kafka (librdkafka) support
 SNMPDEST_DESC=		Build with SNMP destination (net-snmp) support
 GRPC_DESC=		Build with experimental GRPC-based modules (OpenTelemetry, Loki, etc.)
+MQTT_DESC=		Build with MQTT support
 
 USE_LDCONFIG=	yes
 USE_RC_SUBR=	syslog-ng
@@ -268,6 +269,12 @@ GRPC_PLIST_FILES=		lib/libgrpc-protos.so \
  				lib/syslog-ng/libotel.so \
  				lib/syslog-ng/libbigquery.so \
 				lib/syslog-ng/libcloud_auth.so
+
+MQTT_CONFIGURE_ON=		--enable-mqtt --with-libpaho-mqtt=${PREFIX} 
+MQTT_CONFIGURE_OFF=		--disable-mqtt
+MQTT_LIB_DEPENDS=		libpaho-mqtt3cs.so:net/libpaho-mqtt3
+MQTT_PLIST_FILES=		lib/syslog-ng/libmqtt.so
+
 
 
 .include <bsd.port.pre.mk>
