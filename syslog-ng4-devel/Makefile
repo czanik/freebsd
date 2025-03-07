@@ -1,5 +1,6 @@
 PORTNAME=	syslog-ng
-DISTVERSION=	4.8.1.15.g2d06795
+DISTVERSION=	4.8.1.218.g8023a97
+PORTREVISION=	5
 CATEGORIES=	sysutils
 # official master site:
 MASTER_SITES=	https://github.com/balabit/syslog-ng/releases/download/syslog-ng-${DISTVERSION}/
@@ -117,7 +118,7 @@ JSON_PLIST_FILES=		lib/syslog-ng/libjson-plugin.so \
 				share/syslog-ng/include/scl/cim/template.conf
 
 JAVA_CONFIGURE_ENABLE=		java
-JAVA_USE=			JAVA=yes
+JAVA_USES=			java
 JAVA_PLIST_FILES=		lib/syslog-ng/libmod-java.so \
 				lib/syslog-ng/java-modules/syslog-ng-core.jar
 
@@ -267,10 +268,11 @@ GRPC_PLIST_FILES=		lib/libgrpc-protos.so \
  				lib/libgrpc-protos.so.0.0.0 \
  				lib/syslog-ng/libloki.so \
  				lib/syslog-ng/libotel.so \
+ 				lib/syslog-ng/libclickhouse.so \
  				lib/syslog-ng/libbigquery.so \
 				lib/syslog-ng/libcloud_auth.so
 
-MQTT_CONFIGURE_ON=		--enable-mqtt --with-libpaho-mqtt=${PREFIX} 
+MQTT_CONFIGURE_ON=		--enable-mqtt --with-libpaho-mqtt=${PREFIX}
 MQTT_CONFIGURE_OFF=		--disable-mqtt
 MQTT_LIB_DEPENDS=		libpaho-mqtt3cs.so:net/libpaho-mqtt3
 MQTT_PLIST_FILES=		lib/syslog-ng/libmqtt.so

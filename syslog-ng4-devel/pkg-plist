@@ -36,6 +36,8 @@ include/syslog-ng/cfg-tree.h
 include/syslog-ng/cfg-walker.h
 include/syslog-ng/cfg.h
 include/syslog-ng/children.h
+include/syslog-ng/console.h
+include/syslog-ng/stackdump.h
 include/syslog-ng/compat/compat.h
 include/syslog-ng/compat/curl.h
 include/syslog-ng/compat/getent-generic.h
@@ -269,8 +271,6 @@ include/syslog-ng/transport/tls-verifier.h
 include/syslog-ng/transport/logtransport.h
 include/syslog-ng/transport/multitransport.h
 include/syslog-ng/transport/transport-aux-data.h
-include/syslog-ng/transport/transport-factory-id.h
-include/syslog-ng/transport/transport-factory-registry.h
 include/syslog-ng/transport/transport-factory-socket.h
 include/syslog-ng/transport/transport-factory-tls.h
 include/syslog-ng/transport/transport-factory.h
