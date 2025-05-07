@@ -1,6 +1,6 @@
 PORTNAME=	syslog-ng
-DISTVERSION=	4.8.1.487.g4a117ee
-PORTREVISION=	1
+DISTVERSION=	4.8.2
+PORTREVISION=	5
 CATEGORIES=	sysutils
 # official master site:
 MASTER_SITES=	https://github.com/balabit/syslog-ng/releases/download/syslog-ng-${DISTVERSION}/
@@ -270,9 +270,7 @@ GRPC_PLIST_FILES=		lib/libgrpc-protos.so \
  				lib/libgrpc-protos.so.0.0.0 \
  				lib/syslog-ng/libloki.so \
  				lib/syslog-ng/libotel.so \
- 				lib/syslog-ng/libclickhouse.so \
  				lib/syslog-ng/libbigquery.so \
- 				lib/syslog-ng/libpubsub.so \
 				lib/syslog-ng/libcloud_auth.so
 
 MQTT_CONFIGURE_ON=		--enable-mqtt --with-libpaho-mqtt=${PREFIX}
