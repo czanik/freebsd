@@ -1,6 +1,6 @@
 PORTNAME=	syslog-ng
-DISTVERSION=	4.8.2
-PORTREVISION=	5
+DISTVERSION=	4.8.3.464.g3f950ee
+PORTREVISION=	1
 CATEGORIES=	sysutils
 # official master site:
 MASTER_SITES=	https://github.com/balabit/syslog-ng/releases/download/syslog-ng-${DISTVERSION}/
@@ -243,7 +243,13 @@ PYTHON_MOD_PLIST_FILES=		lib/syslog-ng/python/syslogng-1.0-py%%PYTHON_VER%%.egg-
                 lib/syslog-ng/python/syslogng/modules/s3/s3_session_handler.py \
                 lib/syslog-ng/python/syslogng/modules/s3/compressable_file_buffer.py \
                 lib/syslog-ng/python/syslogng/modules/s3/s3_destination.py \
-                lib/syslog-ng/python/syslogng/modules/s3/scl/s3.conf
+                lib/syslog-ng/python/syslogng/modules/s3/scl/s3.conf \
+                lib/syslog-ng/python/syslogng/modules/webhook/__init__.py \
+                lib/syslog-ng/python/syslogng/modules/webhook/__pycache__/__init__%%PYTHON_EXT_SUFFIX%%.pyc \
+                lib/syslog-ng/python/syslogng/modules/webhook/__pycache__/source%%PYTHON_EXT_SUFFIX%%.pyc \
+                lib/syslog-ng/python/syslogng/modules/webhook/scl/webhook.conf \
+                lib/syslog-ng/python/syslogng/modules/webhook/source.py
+
 
 
 CURL_CONFIGURE_OFF=		--with-libcurl=off
@@ -270,7 +276,9 @@ GRPC_PLIST_FILES=		lib/libgrpc-protos.so \
  				lib/libgrpc-protos.so.0.0.0 \
  				lib/syslog-ng/libloki.so \
  				lib/syslog-ng/libotel.so \
+ 				lib/syslog-ng/libclickhouse.so \
  				lib/syslog-ng/libbigquery.so \
+ 				lib/syslog-ng/libpubsub.so \
 				lib/syslog-ng/libcloud_auth.so
 
 MQTT_CONFIGURE_ON=		--enable-mqtt --with-libpaho-mqtt=${PREFIX}
