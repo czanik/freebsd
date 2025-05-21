@@ -345,6 +345,7 @@ include/syslog-ng/transport/transport-factory-haproxy.h
 include/syslog-ng/transport/transport-globals.h
 include/syslog-ng/transport/transport-haproxy.h
 include/syslog-ng/transport/transport-stack.h
+include/syslog-ng/notified-fd-events.h
 share/syslog-ng/smart-multi-line.fsm
 lib/libevtlog-4.8.so.0
 lib/libevtlog-4.8.so.0.0.0
