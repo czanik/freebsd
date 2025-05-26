@@ -1,5 +1,5 @@
 PORTNAME=	syslog-ng
-DISTVERSION=	4.8.3.499.g6bb9d1a
+DISTVERSION=	4.8.3.507.g51d03a4
 PORTREVISION=	1
 CATEGORIES=	sysutils
 # official master site:
@@ -127,27 +127,10 @@ JAVA_MOD_CONFIGURE_ENABLE=	java-modules
 JAVA_MOD_USE=			JAVA=yes
 JAVA_MOD_BUILD_DEPENDS=		gradle:devel/gradle \
 				bash:shells/bash
-JAVA_MOD_PLIST_DIRS=		lib/syslog-ng/java-modules/elastic-jest-client
-JAVA_MOD_PLIST_FILES=		lib/syslog-ng/java-modules/log4j-api-2.17.2.jar \
-				lib/syslog-ng/java-modules/log4j-core-2.17.2.jar \
-				lib/syslog-ng/java-modules/elastic-jest-client/jest-2.0.2.jar \
-				lib/syslog-ng/java-modules/elastic-jest-client/jest-common-2.0.2.jar \
-				lib/syslog-ng/java-modules/elastic-jest-client/httpcore-nio-4.4.4.jar \
-				lib/syslog-ng/java-modules/elastic-jest-client/httpclient-4.5.2.jar \
-				lib/syslog-ng/java-modules/elastic-jest-client/httpasyncclient-4.1.1.jar \
-				lib/syslog-ng/java-modules/elastic-jest-client/slf4j-api-1.7.13.jar \
-				lib/syslog-ng/java-modules/elastic-jest-client/guava-19.0.jar \
-				lib/syslog-ng/java-modules/elastic-jest-client/gson-2.6.2.jar \
-				lib/syslog-ng/java-modules/elastic-jest-client/commons-lang3-3.4.jar \
-				lib/syslog-ng/java-modules/elastic-jest-client/httpcore-4.4.4.jar \
-				lib/syslog-ng/java-modules/elastic-jest-client/commons-logging-1.2.jar \
-				lib/syslog-ng/java-modules/elastic-jest-client/commons-codec-1.9.jar \
-				lib/syslog-ng/java-modules/elastic-jest-client/slf4j-simple-1.7.13.jar \
+JAVA_MOD_PLIST_FILES=		lib/syslog-ng/java-modules/log4j-api-2.24.3.jar \
+				lib/syslog-ng/java-modules/log4j-core-2.24.3.jar \
 				lib/syslog-ng/java-modules/hdfs.jar \
-				lib/syslog-ng/java-modules/elastic-v2.jar \
-				lib/syslog-ng/java-modules/kafka.jar \
 				lib/syslog-ng/java-modules/dummy.jar \
-				lib/syslog-ng/java-modules/http.jar \
 				lib/syslog-ng/java-modules/syslog-ng-common.jar
 
 PYTHON_BUILD_DEPENDS=		${PY_SETUPTOOLS}

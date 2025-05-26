@@ -424,7 +424,6 @@ share/syslog-ng/include/scl/collectd/plugin.conf
 share/syslog-ng/include/scl/default-network-drivers/plugin.conf
 share/syslog-ng/include/scl/discord/discord.conf
 share/syslog-ng/include/scl/elasticsearch/elastic-http.conf
-share/syslog-ng/include/scl/elasticsearch/elastic-java.conf
 share/syslog-ng/include/scl/elasticsearch/elastic-datastream.conf
 share/syslog-ng/include/scl/ewmm/ewmm.conf
 share/syslog-ng/include/scl/fortigate/fortigate.conf
@@ -434,7 +433,6 @@ share/syslog-ng/include/scl/graylog2/plugin.conf
 share/syslog-ng/include/scl/hdfs/plugin.conf
 share/syslog-ng/include/scl/iptables/iptables.conf
 share/syslog-ng/include/scl/junos/plugin.conf
-share/syslog-ng/include/scl/kafka/kafka-java.conf
 share/syslog-ng/include/scl/kafka/kafka.conf
 share/syslog-ng/include/scl/linux-audit/linux-audit.conf
 share/syslog-ng/include/scl/loadbalancer/gen-loadbalancer.sh
