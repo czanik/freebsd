@@ -474,6 +474,7 @@ share/syslog-ng/include/scl/darwinosl/plugin.conf
 share/syslog-ng/include/scl/arr/arr.conf
 share/syslog-ng/include/scl/jellyfin/jellyfin.conf
 share/syslog-ng/include/scl/azure/azure-monitor.conf
+share/syslog-ng/include/scl/freebsd-audit/plugin.conf
 share/syslog-ng/include/scl.conf
 share/syslog-ng/tools/cfg-grammar.y
 share/syslog-ng/tools/lex-rules.am
