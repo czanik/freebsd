@@ -135,7 +135,6 @@ include/syslog-ng/logproto/logproto-client.h
 include/syslog-ng/logproto/logproto-dgram-server.h
 include/syslog-ng/logproto/logproto-framed-client.h
 include/syslog-ng/logproto/logproto-framed-server.h
-include/syslog-ng/logproto/logproto-multiline-server.h
 include/syslog-ng/logproto/logproto-record-server.h
 include/syslog-ng/logproto/logproto-server.h
 include/syslog-ng/logproto/logproto-text-client.h
@@ -293,7 +292,6 @@ include/syslog-ng/healthcheck/healthcheck-stats.h
 include/syslog-ng/healthcheck/healthcheck.h
 include/syslog-ng/healthcheck/stopwatch.h
 include/syslog-ng/stats/stats-cluster-key-builder.h
-include/syslog-ng/cfg-monitor.h
 include/syslog-ng/multi-line/multi-line-pattern.h
 include/syslog-ng/multi-line/smart-multi-line.h
 include/syslog-ng/stats/stats-compat.h
@@ -346,6 +344,10 @@ include/syslog-ng/transport/transport-globals.h
 include/syslog-ng/transport/transport-haproxy.h
 include/syslog-ng/transport/transport-stack.h
 include/syslog-ng/notified-fd-events.h
+include/syslog-ng/file-monitor.h
+include/syslog-ng/logproto/logproto-http-scraper-responder-server.h
+include/syslog-ng/logproto/logproto-http-server.h
+include/syslog-ng/multi-line/empty-line-separated-multi-line.h
 share/syslog-ng/smart-multi-line.fsm
 lib/libevtlog-4.8.so.0
 lib/libevtlog-4.8.so.0.0.0
@@ -475,6 +477,7 @@ share/syslog-ng/include/scl/arr/arr.conf
 share/syslog-ng/include/scl/jellyfin/jellyfin.conf
 share/syslog-ng/include/scl/azure/azure-monitor.conf
 share/syslog-ng/include/scl/freebsd-audit/plugin.conf
+share/syslog-ng/include/scl/stats-exporter/plugin.conf
 share/syslog-ng/include/scl.conf
 share/syslog-ng/tools/cfg-grammar.y
 share/syslog-ng/tools/lex-rules.am
