@@ -1,5 +1,5 @@
 PORTNAME=	syslog-ng
-DISTVERSION=	4.9.0.20.g9e97f81
+DISTVERSION=	4.9.0.54.ge0b765e
 PORTREVISION=	1
 CATEGORIES=	sysutils
 # official master site:
@@ -275,6 +275,10 @@ MQTT_PLIST_FILES=		lib/syslog-ng/libmqtt.so
 
 .if !${PORT_OPTIONS:MJSON}
 BROKEN=		Default configuration does not currently support non-JSON builds
+.endif
+
+.if ${PORT_OPTIONS:MJAVA_MOD}
+BROKEN=		Java-based modules do not build due to Gradle problems
 .endif
 
 post-patch:

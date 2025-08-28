@@ -87,6 +87,7 @@ include/syslog-ng/filter/filter-pipe.h
 include/syslog-ng/filter/filter-pri.h
 include/syslog-ng/filter/filter-re.h
 include/syslog-ng/filter/filter-tags.h
+include/syslog-ng/filter/filter-blank.h
 include/syslog-ng/find-crlf.h
 include/syslog-ng/generic-number.h
 include/syslog-ng/gprocess.h
