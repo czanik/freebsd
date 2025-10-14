@@ -310,6 +310,7 @@ include/syslog-ng/file-monitor.h
 include/syslog-ng/logproto/logproto-http-scraper-responder-server.h
 include/syslog-ng/logproto/logproto-http-server.h
 include/syslog-ng/multi-line/empty-line-separated-multi-line.h
+include/syslog-ng/crypto-utils.h
 share/syslog-ng/smart-multi-line.fsm
 lib/libevtlog-4.10.so.0
 lib/libevtlog-4.10.so.0.0.0
