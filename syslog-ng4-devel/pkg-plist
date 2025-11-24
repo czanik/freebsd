@@ -398,7 +398,6 @@ share/syslog-ng/include/scl/graylog2/plugin.conf
 share/syslog-ng/include/scl/hdfs/plugin.conf
 share/syslog-ng/include/scl/iptables/iptables.conf
 share/syslog-ng/include/scl/junos/plugin.conf
-share/syslog-ng/include/scl/kafka/kafka.conf
 share/syslog-ng/include/scl/linux-audit/linux-audit.conf
 share/syslog-ng/include/scl/loadbalancer/gen-loadbalancer.sh
 share/syslog-ng/include/scl/loadbalancer/plugin.conf
