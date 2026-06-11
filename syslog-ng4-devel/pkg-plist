@@ -2,9 +2,6 @@ bin/dqtool
 bin/loggen
 bin/pdbtool
 bin/persist-tool
-bin/slogencrypt
-bin/slogkey
-bin/slogverify
 bin/update-patterndb
 bin/syslog-ng-update-virtualenv
 etc/syslog-ng.conf.dist
@@ -352,7 +349,6 @@ lib/syslog-ng/libmap-value-pairs.so
 lib/syslog-ng/libmetrics-probe.so
 lib/syslog-ng/libpseudofile.so
 lib/syslog-ng/libregexp-parser.so
-lib/syslog-ng/libsecure-logging.so
 lib/syslog-ng/libstardate.so
 lib/syslog-ng/libsyslogformat.so
 lib/syslog-ng/libsystem-source.so
@@ -372,14 +368,14 @@ share/man/man1/dqtool.1.gz
 share/man/man1/loggen.1.gz
 share/man/man1/pdbtool.1.gz
 share/man/man1/persist-tool.1.gz
-share/man/man1/slogencrypt.1.gz
-share/man/man1/slogkey.1.gz
-share/man/man1/slogverify.1.gz
 share/man/man1/syslog-ng-ctl.1.gz
 share/man/man1/syslog-ng-debun.1.gz
 share/man/man5/syslog-ng.conf.5.gz
-share/man/man7/secure-logging.7.gz
 share/man/man8/syslog-ng.8.gz
+share/man/man1/slogencrypt.1.gz
+share/man/man1/slogkey.1.gz
+share/man/man1/slogverify.1.gz
+share/man/man7/secure-logging.7.gz
 share/syslog-ng/include/scl/apache/apache.conf
 share/syslog-ng/include/scl/cee/adapter.conf
 share/syslog-ng/include/scl/checkpoint/plugin.conf
